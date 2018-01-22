@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>foodmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ </head>
 
+ <body onload="timeout()">
+  <div class="container-fluid">
+   <!-- splash -->
+   <div class="splash">
+    <h1></h1>
+   </div>
+   <!-- principal -->
+   <h1 class="text-center">Foodmap</h1>
+   <hr/>
+   <!-- map -->
+   <div class="row map">
+    <iframe class="col-md-12 col-sm-12 col-xs-12 img-map"
+     src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15050.731531055028!2d-99.162264267443!3d19.426103002805565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scomida+roma+norte!5e0!3m2!1ses-419!2smx!4v1516398694754"
+     width="800" height="300" frameborder="0" style="border:0" allowfullscreen>
+    </iframe>
+   </div>
+
+   <h2 class="text-center col-xs-12">Comida cerca de ti</h2>
+   <!-- filtrado y autocompletado -->
+   <div class="row buscador">
+    <!--<a class="col-md-1 col-sm-1 col-xs-1 pull-center"><i class="fa fa-search" aria-hidden="true"></i></a>-->
+    <input class="col-md-10 col-sm-10 col-xs-10  col-xs-offset-1" type="text" id="searcher" placeholder="filtrar restaurantes">
+   </div>
+
+   <!-- images -->
+   <div class="col-md-12 col-sm-12 col-xs-12 restaurantes">
+    <div class="row">
+     <span class="col-md-6 col-sm-6 col-xs-6 resto pizzarn"
+      data-toggle="modal" data-target="#pizzamodal">
+      <img class="rest" src="assets/images/pizza.jpg" alt="pizza">
+     </span>
+     <span class="col-md-6 col-sm-6 col-xs-6 resto pizzarn"
+      data-toggle="modal" data-target="#pizzamodal">
+      <img class="rest" src="assets/images/hambur.jpg" alt="pizza">
+     </span>
+    </div>
+    <div class="row">
+     <span class="col-md-4 col-sm-4 col-xs-4 resto pizzarn"
+      data-toggle="modal" data-target="#pizzamodal">
+      <img class="rest" src="assets/images/pasta.jpg" alt="pizza">
+     </span>
+     <span class="col-md-4 col-sm-4 col-xs-4 resto pizzarn"
+       data-toggle="modal" data-target="#pizzamodal">
+       <img class="rest" src="assets/images/sushi.jpg" alt="pizza">
+     </span>
+     <span class="col-md-4 col-sm-4 col-xs-4 resto pizzarn"
+       data-toggle="modal" data-target="#pizzamodal">
+       <img class="rest" src="assets/images/tacos.jpg" alt="pizza">
+     </span>
+    </div>
+   </div>
+
+   <!-- modal starts session -->
+   <section id="pizzamodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+     <!-- Modal content -->
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h2 class="text-center">Pizza Roma Norte 1</h2>
+      </div>
+      <div class="map-mod row">
+       <iframe class="col-md-12 col-sm-12 col-xs-12 img-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.7262150197555!2d-99.17019851189744!3d19.4165162640089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4709285507%3A0xbbb2cd252c5b4946!2sPizza+del+Perro+Negro!5e0!3m2!1ses-419!2smx!4v1516498361384"
+        frameborder="0" style="border:0" allowfullscreen>
+       </iframe>
+      </div>
+      <h5 class="text-center">Local urbano con decoración ecléctica que gira entorno a la pizza artesanal,
+       la cerveza y el rock and roll.
+      </h5>
+      <div class="text-left col-md-offset-2 col-sm-offset-2 col-xs-12 datos">
+       <address class="pull-left col-xs-6">
+        <strong>Empresa S.A.</strong><br>
+         Parque España 3, Roma Nte.,<br>
+         06700 Ciudad de México, CDMX<br>
+         <abbr title="Phone">Tel:</abbr> 01 55 5351 7401
+       </address>
+       <div class="pago pull-right col-xs-6">
+        <div class="tarjetas">
+         <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+         <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+         <i class="fa fa-cc-visa" aria-hidden="true"></i>
+        </div>
+        <div class="stars">
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <i class="fa fa-star-o" aria-hidden="true"></i>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 pull-center">
+       <button class="btn btn-secundary ordenar" type="button" name="button">pedir ahora</button>
+      </div>
+     </div>
+    </div>
+   </section>
+
+
+   <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous">
+   </script>
+   <script src="js/data.js"></script>
+   <script src="js/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous">
+   </script>
+  </div>
+ </body>
+</html>

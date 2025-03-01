@@ -4,7 +4,8 @@
 
 **General usage notes:**
 
-- Create a web-app that through an input can filter the restaurants that are near you (You decide the structure that your data will have, you can create a list of restaurants in an arrangement, in an object, individually. design is totally free).
+- Create a web-app that through an input can filter the restaurants that are near you (You decide the structure that your data will have, you can create a list of cafes
+ in an arrangement, in an object, individually. design is totally free).
 
 ## FLOW OF THE APPLICATION.
 - Splash view with duration of 2 to 5 seconds that redirects to your main view.

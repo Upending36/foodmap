@@ -4,6 +4,9 @@
 
 **General usage notes:**
 
+
+
+
 - Create a web-app that through an input can filter the restaurants that are near you (You decide the structure that your data will have, you can create a list of cafes
  in an arrangement, in an object, individually. design is totally free).
 
